@@ -45,5 +45,3 @@ Route::post('/login', [SessionController::class, 'store']);
 Route::post('/logout', [SessionController::class, 'destroy'])->name('logout');
 
 Route::get('/settings', [SettingsController::class, 'show'])->middleware('auth');
-
-

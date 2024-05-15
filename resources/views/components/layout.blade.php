@@ -4,13 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{  config("name") }}</title>
+    <title>Tegschtfluss</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=coda:400,800" rel="stylesheet"/>
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite(['resources/js/app.js', 'resources/css/app.css'])
 </head>
 <body class="h-full antialiased dark:bg-black dark:text-white/50">
 
@@ -21,7 +20,7 @@
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
                         <a href="/">
-                            <img class="h-8 w-8" src="{{ asset('/images/wateer.png') }}" alt="BlausBluet">
+                            <img class="h-8 w-8" src="{{ asset('/images/wateer.png') }}" alt="Tegschtfluss">
                         </a>
                     </div>
                     <div class="hidden md:block">

@@ -16,7 +16,8 @@ class Version {
         3 => 'beta-0.4',
         4 => 'beta-0.5',
         5 => 'beta-0.6',
-        6 => 'beta-0.7'
+        6 => 'beta-0.7',
+        7 => 'beta-0.8'
     ];
 
     public static function latest(): string {
