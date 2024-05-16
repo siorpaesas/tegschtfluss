@@ -1,3 +1,19 @@
+@import url(https://fonts.bunny.net/css?family=anaheim:400|coda:400,800|kite-one:400);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    h1 {
+        @apply text-x2l font-titu font-bold tracking-tight text-gray-900
+    }
+
+    h2 {
+        @apply text-xl font-titu font-bold my-6
+    }
+
+    h3 {
+        @apply text-lg font-titu font-bold my-4
+    }
+}

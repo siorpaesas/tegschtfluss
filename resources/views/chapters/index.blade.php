@@ -2,8 +2,10 @@
     <x-slot:heading>
         Kapitu
     </x-slot:heading>
-    <p>Hie chame sech en Übersicht zu de Kapitu im Buech <strong>{{ $chapters[0]->book->name }}</strong> schaffe.</p>
-    <p>Es het im Moment <span class="italic font-bold">{{ $chapters->total() }}</span> Kapitu.</p>
+    <p class="text-xl">Hie chasch der Übersicht zu de Kapitu i dim Buech <strong>{{ $chapters[0]->book->name }}</strong>
+        verschaffe.</p>
+    <p class="mt-3">Dis Buech <span class="italic font-bold">{{ $chapters[0]->book->name }}</span> het im Moment <span
+            class="italic font-bold">{{ $chapters->total() }}</span> Kapitu.</p>
     <div class="mt-8">
         <x-button :action="'/chapters/create'">+ Nöis Kapitu</x-button>
     </div>
@@ -11,9 +13,11 @@
         @foreach($chapters as $chapter)
             <div class="rounded-xl p-4 bg-blue-100 drop-shadow-md">
                 <a href="chapters/{{ $chapter->id }}">
-                    <h2 class="text-xl font-bold">{{ $chapter->name }}</h2>
-                    <p class="mt-2 italic" style="font-family: coda, Helvetica, sans-serif">{{ $chapter->excerpt }}</p>
-                    <p class="mt-4">{{ $chapter->book->name }}</p>
+                    <div class="flex flex-col">
+                        <h3 class="basis-1/5 text-lg font-bold">{{ $chapter->name }}</h3>
+                        <p class="grow basis-3/5 italic font-sans">{{ $chapter->excerpt }}</p>
+                        <p class="basis-1/5 font-ingress text-md">Nummere vom Kapitu: {{ $chapter->sequence }}</p>
+                    </div>
                 </a>
             </div>
         @endforeach
