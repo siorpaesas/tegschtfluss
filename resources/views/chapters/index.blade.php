@@ -13,10 +13,10 @@
         @foreach($chapters as $chapter)
             <div class="rounded-xl p-4 bg-blue-100 drop-shadow-md">
                 <a href="chapters/{{ $chapter->id }}">
-                    <div class="flex flex-col">
-                        <h3 class="basis-1/5 text-lg font-bold">{{ $chapter->name }}</h3>
-                        <p class="grow basis-3/5 italic font-sans">{{ $chapter->excerpt }}</p>
-                        <p class="basis-1/5 font-ingress text-md">Nummere vom Kapitu: {{ $chapter->sequence }}</p>
+                    <div class="flex flex-col h-auto">
+                        <h3 class="text-lg font-bold">{{ $chapter->name }}</h3>
+                        <p class="italic font-ingress">{{ $chapter->excerpt }}</p>
+                        <p class="font-sans font-bold text-md">Nummere vom Kapitu: {{ $chapter->sequence }}</p>
                     </div>
                 </a>
             </div>

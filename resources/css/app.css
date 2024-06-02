@@ -6,7 +6,7 @@
 
 @layer components {
     h1 {
-        @apply text-x2l font-titu font-bold tracking-tight text-gray-900
+        @apply text-3xl font-titu font-bold tracking-tight text-gray-900
     }
 
     h2 {
@@ -16,4 +16,31 @@
     h3 {
         @apply text-lg font-titu font-bold my-4
     }
+}
+
+.note-low {
+    background-color: #d1e7dd;
+}
+
+.color-low {
+    color: #155724;
+    border-color: #155724;
+}
+
+.note-medium {
+    background-color: #fff3cd;
+}
+
+.color-medium {
+    color: #856404;
+    border-color: #856404;
+}
+
+.note-high {
+    background-color: #f8d7da;
+}
+
+.color-high {
+    color: #842029;
+    border-color: #842029;
 }

@@ -3,31 +3,15 @@
 ])
 
 @php
-    switch($note->prio) {
-        case 'low':
-            $bgColor = '#d1e7dd';
-            $color = '#155724';
-            break;
-        case 'medium':
-        default:
-            $bgColor = '#fff3cd';
-            $color = '#856404';
-            break;
-        case 'high':
-            $bgColor = '#f8d7da';
-            $color = '#842029';
-            break;
-    }
-
     $rand = mt_rand(56, 736234);
 @endphp
 
-<div class="border rounded m-2 p-2" style="background-color: {{ $bgColor }}">
+<div class="border rounded m-2 p-2 note-{{$note->prio}}">
     <div class="grid grid-cols-5 gap-4">
-        <div class="ml-2 border-l-4 pl-4 col-span-4" style="border-color: {{ $color }}; color: {{ $color }}">
+        <div class="ml-2 border-l-4 text-lg pl-4 col-span-4 color-{{$note->prio}}">
             {{ $note->todo }}
         </div>
-        <div class="col-span-1 flex place-items-end justify-end space-x-2">
+        <div class="col-span-1 flex place-items-center justify-end space-x-2">
             <div class="hover:opacity-40">
                 <a href="/notes/{{ $note->id }}/edit">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

@@ -3,17 +3,17 @@
         Kapitu: {{ $chapter->name }}
     </x-slot:heading>
     <div>
-        <h2 class="text-2xl font-bold mb-4">Generelli Date zum Kapitu</h2>
-        <p class="text-sm">Nummere vom Kapitu: {{ $chapter->sequence }}</p>
+        <h2 class="text-xl font-bold mb-4">Generelli Date zum Kapitu</h2>
+        <p>Nummere vom Kapitu: {{ $chapter->sequence }}</p>
         @empty($lastBuild)
-            <p class="text-sm mt-2">No kes Update zum Kapitu. -> <a class="hover:underline" href="/chapter/{{ $chapter->id }}/stats">Itz grad ändere</a></p>
+            <p class="mt-2">No kes Update zum Kapitu. -> <a class="hover:underline" href="/chapter/{{ $chapter->id }}/stats">Itz grad ändere</a></p>
         @else
-            <p class="text-sm">Aazau Wörter bis itz: {{ $lastBuild->words }}</p>
-        <p class="text-sm">Wielang me zirka het zum Läse vom Kapitu: {{ $lastBuild->length }} Minute</p>
-        <p class="text-sm mt-2">Z letschte Statistik-Update het stattgfunde am <span class="font-bold italic">{{ $lastBuild->created_at->locale('de_DE')->isoFormat('LL') }}</span>
+            <p>Aazau Wörter bis itz: {{ $lastBuild->words }}</p>
+            <p>Wielang me zirka het zum Läse vom Kapitu: {{ $lastBuild->length }} Minute</p>
+            <p class="mt-2">Z letschte Statistik-Update het stattgfunde am <span class="font-bold italic">{{ $lastBuild->created_at->locale('de_DE')->isoFormat('LL') }}</span>
             -> <a class="hover:underline" href="/chapter/{{ $chapter->id }}/stats">Update</a></p>
         @endempty
-        <p class="text-sm mt-4"><a href="/chapters/{{ $chapter->id }}/detail">Detaijierti Stats aaluege</a></p>
+        <p class="mt-4"><a href="/chapters/{{ $chapter->id }}/detail">Detaijierti Stats aaluege</a></p>
     </div>
     <div class="mt-6">
         <h2 class="text-2xl font-bold mb-4">Was no z mache isch</h2>
@@ -70,7 +70,7 @@
 
     <div class="mt-16">
         <p>
-            <a class="text-sm font-semibold leading-6 text-gray-900 hover:underline" href="/chapters">Zrügg</a>
+            <a class="font-semibold leading-6 text-gray-900 hover:underline" href="/chapters">Zrügg</a>
         </p>
     </div>
 </x-layout>
